@@ -19,9 +19,21 @@ public class BankAccountTest {
     }
 
     @Test
+    public void canSetFirstName(){
+        this.myBankAccount.setFirstName("John");
+        assertThat(myBankAccount.getFirstName()).isEqualTo("John");
+    }
+
+    @Test
     public void canReturnLastName(){
         String result = myBankAccount.getLastName();
         assertThat(result).isEqualTo("Peddie");
+    }
+
+    @Test
+    public void canSetLastName(){
+        this.myBankAccount.setLastName("Doe");
+        assertThat(myBankAccount.getLastName()).isEqualTo("Doe");
     }
 
     @Test
@@ -31,15 +43,33 @@ public class BankAccountTest {
     }
 
     @Test
+    public void canSetDateOfBirth(){
+        this.myBankAccount.setDateOfBirth("10052024");
+        assertThat(myBankAccount.getDateOfBirth()).isEqualTo("10052024");
+    }
+
+    @Test
     public void canReturnAccountNumber(){
         String result = myBankAccount.getAccountNumber();
         assertThat(result).isEqualTo("123456");
     }
 
     @Test
+    public void canSetAccountNumber(){
+        this.myBankAccount.setAccountNumber("987654");
+        assertThat(myBankAccount.getAccountNumber()).isEqualTo("987654");
+    }
+
+    @Test
     public void canReturnBalance(){
         double result = myBankAccount.getBalance();
         assertThat(result).isEqualTo(20.00);
+    }
+
+    @Test
+    public void canSetBankBalance(){
+        this.myBankAccount.setBalance(40.00);
+        assertThat(myBankAccount.getBalance()).isEqualTo(40.00);
     }
 
     @Test
